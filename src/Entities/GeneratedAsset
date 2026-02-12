@@ -1,0 +1,56 @@
+{
+  "name": "GeneratedAsset",
+  "type": "object",
+  "properties": {
+    "project_id": {
+      "type": "string",
+      "description": "Associated project ID"
+    },
+    "generator_type": {
+      "type": "string",
+      "enum": [
+        "logo",
+        "avatar",
+        "architecture",
+        "product",
+        "social",
+        "concept"
+      ],
+      "description": "Type of generator used"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Generated image URL"
+    },
+    "prompt": {
+      "type": "string",
+      "description": "Full prompt used for generation"
+    },
+    "settings": {
+      "type": "object",
+      "description": "Generation settings (seed, style, etc.)"
+    },
+    "is_favorite": {
+      "type": "boolean",
+      "default": false
+    },
+    "license_type": {
+      "type": "string",
+      "enum": [
+        "personal",
+        "commercial",
+        "extended"
+      ],
+      "description": "License selected at export"
+    },
+    "exported": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "generator_type",
+    "image_url",
+    "prompt"
+  ]
+}
